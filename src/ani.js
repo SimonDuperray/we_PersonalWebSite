@@ -33,21 +33,6 @@ $(document).ready(function(){
         $('.menu-btn i').toggleClass("active");
     });
 
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["Developer", "Student", "Self-Taught"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    var typed = new Typed(".typing-2", {
-        strings: ["Developer", "Student", "Self-Taught"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
     // owl carousel script
     $('.carousel').owlCarousel({
         items: 3,
