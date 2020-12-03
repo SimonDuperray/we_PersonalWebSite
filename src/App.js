@@ -7,20 +7,37 @@
 */
 
 import React, { Component } from 'react';
-import Typical from "../node_modules/react-typical";
-import $ from "jquery";
 import './App.css';
 
-// IMPORT IMAGES
 import banner from "../src/images/banner.jpg";
-import amelie from "../src/images/amelie.jpg";
-import franck from "../src/images/franck.jpg";
-import jules from "../src/images/jules.jpg";
-import leopold from "../src/images/leopold.jpg";
-import titouan from "../src/images/titouan.jpg";
-import zara from "../src/images/zara.jpg";
+
+// IMPORT PACKAGES
+import Typical from "../node_modules/react-typical";
+import $ from "jquery";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+
+// IMPORT COMPONENTS
+import Services__card from "./components/Services__card";
+import Teams__card from "./components/Teams__card";
 
 class App extends Component{
+  constructor(props){
+    super(props);
+    this.state={responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 2,
+        },
+        1000: {
+          items: 3,
+        },
+      }
+    }
+  }
   componentDidMount(){
     $(document).ready(function(){
       $(window).scroll(function(){
@@ -50,7 +67,6 @@ class App extends Component{
         <nav className="navbar" id="navbar">
           <div className="max-width">
             <div className="logo"><a href="#home">Si<span>monD.</span></a></div>
-            {/* <div className="logo"><a href="#">Si<span>monD.</span></a></div> */}
             <ul className="menu">
               <li><a href="#home" className="menu-btn">Home</a></li>
               <li><a href="#about" className="menu-btn">About</a></li>
@@ -136,27 +152,21 @@ class App extends Component{
           <div className="max-width">
             <h2 className="title">My services</h2>
             <div className="serv-content content-border">
-              <div className="card">
-                <div className="box">
-                  <i className="fas fa-code"></i>
-                  <div className="text">Web Development</div>
-                  <p>Full Stack Websites | Mobile Applications | Progressive Web Apps</p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="box">
-                  <i className="fas fa-code"></i>
-                  <div className="text">Electronics</div>
-                  <p>Microcontroller | PIC | STM32F103 | Arduino</p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="box">
-                  <i className="fas fa-code"></i>
-                  <div className="text">Artificial Intelligence</div>
-                  <p>Machine, deep and reinforcement learning deployment algorithms</p>
-                </div>
-              </div>
+              <Services__card 
+                icon="1"
+                title="Web Development" 
+                description="Full Stack Websites | Mobile Applications | PWA" 
+              />
+              <Services__card 
+                icon="2"
+                title="Electronics" 
+                description="Microcontroller | PIC | STM32F103 | Arduino" 
+              />
+              <Services__card 
+                icon="3"
+                title="Artificial Intelligence" 
+                description="Machine, deep, reinforcement learning deployment algorithm" 
+              />
             </div>
           </div>
         </section>
@@ -393,49 +403,32 @@ class App extends Component{
         <section className="teams" id="teams">
           <div className="max-width">
             <h2 className="title">My team</h2>
-            <div className="carousel owl-carousel content-border">
-              <div class="card">
-                <div class="box">
-                  <img src={franck} alt=""/>
-                  <a href="https://www.linkedin.com/in/gomezfranck/" target="_blank" class="text name-teams">Franck Gomez</a>
-                  <p class="desc-teams">AI | Web Development | Entrepreneurship</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                  <img src={amelie} alt=""/>
-                  <a href="https://www.linkedin.com/in/am%C3%A9liedousteyssier/" target="_blank" class="text name-teams">Amélie Dousteyssier</a>
-                  <p class="desc-teams">Sciences | Managment | Technology</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                  <img src={jules} alt=""/>
-                  <a href="https://www.linkedin.com/in/jules-del%C3%A9tang-4607431a9/" target="_blank" class="text name-teams">Jules Delétang</a>
-                  <p class="desc-teams">Electronics | Engineering | Handiwork</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                  <img src={titouan} alt=""/>
-                  <a href="https://www.linkedin.com/in/titouan-machet/" target="_blank" class="text name-teams">Titouan Machet</a>
-                  <p class="desc-teams">Programming | Engineering | Electronics</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                  <img src={zara} alt=""/>
-                  <a href="https://www.linkedin.com/in/zara-marks-9411451a1/" target="_blank" class="text name-teams">Zara Marks</a>
-                  <p class="desc-teams">Electronics | Teaching | Programming</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                  <img src={leopold} alt=""/>
-                  <a href="https://www.linkedin.com/in/l%C3%A9opold-denis-b960011b1/" target="_blank" class="text name-teams">Léopold Denis</a>
-                  <p class="desc-teams">Electronics | Music | Programming</p>
-                </div>
-              </div>
+            <div className="carousel content-border">
+              <OwlCarousel
+                // loop
+                margin={10}
+                responsiveClass="true"
+                responsive={this.state.responsive}
+              >
+                <Teams__card 
+                  engineer="1"
+                />
+                <Teams__card 
+                  engineer="2"
+                />
+                <Teams__card 
+                  engineer="3"
+                />
+                <Teams__card 
+                  engineer="4"
+                />
+                <Teams__card 
+                  engineer="5"
+                />
+                <Teams__card 
+                  engineer="6"
+                />
+              </OwlCarousel>
             </div>
           </div>
         </section>
