@@ -65,12 +65,18 @@ section{
 .about .about-content, 
 .services .serv-content,
 .skills .skills-content,
-.portfolio .portfolio-content,
+/* .portfolio .portfolio-content, */
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+.portfolio .portfolio-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 section .title{
     position: relative;
@@ -462,7 +468,8 @@ section .title::after{
     margin: 0 10px;
 }
 .portfolio .filters-wrapper li:hover{
-    cursor: pointer;    
+    cursor: pointer;  
+    text-decoration: underline;  
 }
 /* .portfolio .carousel .card{
     background: #222;
@@ -478,21 +485,12 @@ section .title::after{
     padding: 25px 35px;
     text-align: center;
     overflow: hidden;
+    margin: 15px 15px;
     transition: all 0.3s ease;
 }
-/* .portfolio .carousel .card:hover{
-    background: #9B786F;
-} */
 .portfolio .card:hover{
     background: #9B786F;
 }
-/* .portfolio .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-} */
 .portfolio .card .box{
     display: flex;
     flex-direction: column;
@@ -500,38 +498,18 @@ section .title::after{
     justify-content: center;
     transition: all 0.3s ease;
 }
-/* .portfolio .carousel .card:hover .box{
-    transform: scale(1.05);
-} */
 .portfolio .card:hover .box{
     transform: scale(1.05);
 }
-/* .portfolio .carousel .card .text{
-    color: #fff;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-} */
 .portfolio .card .text{
     color: #fff;
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-/* .portfolio .carousel .card p{
-    color: #fff;
-} */
 .portfolio .card p{
     color: #fff;
 }
-/* .portfolio .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #9B786F;
-    transition: all 0.3s ease;
-} */
 .portfolio .card img{
     height: 150px;
     width: 150px;
@@ -540,60 +518,22 @@ section .title::after{
     border: 5px solid #9B786F;
     transition: all 0.3s ease;
 }
-/* .portfolio .carousel .card:hover img{
-    border-color: #fff;
-} */
 .portfolio .card:hover img{
     border-color: #fff;
 }
-/* .portfolio .carousel .card .name-teams{
-    letter-spacing: 1px;
-} */
 .portfolio .card .name-teams{
     letter-spacing: 1px;
 }
-/* .portfolio .carousel .card .desc-teams{
-    letter-spacing: 2px;
-} */
 .portfolio .card .desc-teams{
     letter-spacing: 2px;
 }
-/* .portfolio .carousel .card i{
-    font-size: 50px;
-    color: #9B786F;
-    transition: color 0.3s ease;
-} */
 .portfolio .card i{
     font-size: 50px;
     color: #9B786F;
     transition: color 0.3s ease;
 }
-/* .portfolio .carousel .card:hover i{
-    color: #fff;
-} */
 .portfolio .card:hover i{
     color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid #9B786F!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: #9B786F!important;
 }
 /* PORTFOLIO END */
 
@@ -613,54 +553,6 @@ section .title::after{
     content: "who with me";
     background: #FFF4E9;
 }
-/* .teams .carousel .card{
-    background: #f7e5d5;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover{
-    background: #9B786F;
-}
-.teams .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.teams .carousel .card a.name-teams{
-    color: #111;
-}
-.teams .carousel .card .text{
-    color: #fff;
-    text-decoration: underline;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #9B786F;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.teams .carousel .card .name-teams{
-    letter-spacing: 1px;
-}
-.teams .carousel .card .desc-teams{
-    letter-spacing: 2px;
-} */
 .owl-dots{
     text-align: center;
     margin-top: 20px;

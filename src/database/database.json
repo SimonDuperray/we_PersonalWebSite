@@ -1,0 +1,50 @@
+[
+    {
+        "name": "CoursDeveloppementWeb",
+        "category": "fo",
+        "html_url": "https://github.com/SimonDuperray/fo_CoursDeveloppementWeb",
+        "description": "Initiation au développement web - Entrep' - Interne ESEO",
+        "created_at": "2020-11-07",
+        "language": "HTML"
+    },
+    {
+        "name": "WEBSCRAPINGPY",
+        "category": "fo",
+        "html_url": "https://github.com/SimonDuperray/fo_WEBSCRAPINGPY",
+        "description": "Il n'y a pas encore de description.",
+        "created_at": "2020-07-02",
+        "language": "Jupyter Notebook"
+    },
+    {
+        "name": "chrono-background",
+        "category": "ot",
+        "html_url": "https://github.com/SimonDuperray/ot_chrono-background",
+        "description": "Il n'y a pas encore de description.",
+        "created_at": "2020-12-01",
+        "language": "HTML"
+    },
+    {
+        "name": "KeepBatterySafe",
+        "category": "ot",
+        "html_url": "https://github.com/SimonDuperray/ot_KeepBatterySafe",
+        "description": " This python script will warn you when you should plug in your pc to avoid damaging your battery !",
+        "created_at": "2020-08-19",
+        "language": "Python"
+    },
+    {
+        "name": "Angexplorer",
+        "category": "we",
+        "html_url": "https://github.com/SimonDuperray/we_Angexplorer",
+        "description": "Il n'y a pas encore de description.",
+        "created_at": "2020-11-04",
+        "language": "Langage principal non disponible"
+    },
+    {
+        "name": "WILTY2K20",
+        "category": "we",
+        "html_url": "https://github.com/SimonDuperray/we_WILTY2K20",
+        "description": "Il n'y a pas encore de description.",
+        "created_at": "2020-06-30",
+        "language": "JavaScript"
+    }
+]

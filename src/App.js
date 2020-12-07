@@ -21,11 +21,21 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 // IMPORT COMPONENTS
 import Services__card from "./components/Services__card";
 import Teams__card from "./components/Teams__card";
+import Portfolio__card from "./components/Portfolio__card";
+
+const FILTER_MAP = {
+  All: () => true,
+  AI: task => task.ai,
+  Web: task => task.web,
+  Electronics: task => task.elec,
+  Other: task => task.other
+};
 
 class App extends Component{
   constructor(props){
     super(props);
-    this.state={responsive: {
+    this.state={
+      responsive: {
         0: {
           items: 1,
         },
@@ -55,6 +65,21 @@ class App extends Component{
     });
   }
   render(){
+    const FILTER_NAMES = Object.keys(FILTER_MAP);
+    const filterList = FILTER_NAMES.map(name => (
+      <li key={name} className="filter">{name}</li>
+    ));
+    // const taskList = tasks
+    //   .filter(FILTER_MAP[filter])
+    //   .map(task => (
+    //     <Portfolio__card
+    //       name="Angexplorer"
+    //       description="Entrep's project"
+    //       ai={true}
+    //       web={false}
+    //       elec={false}
+    //     />
+    //   ));
     return (
       <div className="App">
         {/* SCROLL BTN START */}
@@ -304,17 +329,14 @@ class App extends Component{
           <div className="max-width">
             <h2 className="title">My portfolio</h2>
             <ul className="filters-wrapper">
-              <li className="filter">All</li>
-              <li className="filter">AI</li>
-              <li className="filter">Web</li>
-              <li className="filter">Electronics</li>
+              {filterList}
             </ul>
             <div className="portfolio-content">
               <div class="card">
                 <div class="box">
                   <i class="fas fa-code"></i>
                   <div class="text">Angexplorer</div>
-                  <p>Full Stack Websites | Mobile applications | Progressive Web Apps</p>
+                  <p>Full Stack Websites | Mobile applications</p>
                 </div>
               </div>
               <div class="card">
@@ -328,7 +350,7 @@ class App extends Component{
                 <div class="box">
                     <i class="fas fa-code"></i>
                     <div class="text">WILTY</div>
-                    <p>Full Stack Websites | Mobile applications | Progressive Web Apps</p>
+                    <p>Full Stack Websites | Mobile applications</p>
                 </div>
               </div>
               <div class="card">
@@ -342,7 +364,7 @@ class App extends Component{
                 <div class="box">
                     <i class="fas fa-code"></i>
                     <div class="text">Distributeur boisson</div>
-                    <p>Full Stack Websites | Mobile applications | Progressive Web Apps</p>
+                    <p>Full Stack Websites | Mobile applications</p>
                 </div>
               </div>
               <div class="card">
@@ -356,7 +378,7 @@ class App extends Component{
                 <div class="box">
                     <i class="fas fa-code"></i>
                     <div class="text">ADR-Java</div>
-                    <p>Full Stack Websites | Mobile applications | Progressive Web Apps</p>
+                    <p>Full Stack Websites | Mobile applications</p>
                 </div>
               </div>
               <div class="card">
@@ -370,7 +392,7 @@ class App extends Component{
                 <div class="box">
                     <i class="fas fa-code"></i>
                     <div class="text">Personal website</div>
-                    <p>Full Stack Websites | Mobile applications | Progressive Web Apps</p>
+                    <p>Full Stack Websites | Mobile applications</p>
                 </div>
               </div>
               <div class="card">
@@ -384,7 +406,7 @@ class App extends Component{
                 <div class="box">
                     <i class="fas fa-code"></i>
                     <div class="text">Chrono_BG</div>
-                    <p>Full Stack Websites | Mobile applications | Progressive Web Apps</p>
+                    <p>Full Stack Websites | Mobile applications</p>
                 </div>
               </div>
               <div class="card">
@@ -394,6 +416,7 @@ class App extends Component{
                     <p>Microcontroller | PIC | STM32F013 | Arduino</p>
                 </div>
               </div>
+              {/* {taskList} */}
             </div>
           </div>
         </section>
@@ -405,7 +428,7 @@ class App extends Component{
             <h2 className="title">My team</h2>
             <div className="carousel content-border">
               <OwlCarousel
-                // loop
+                loop
                 margin={10}
                 responsiveClass="true"
                 responsive={this.state.responsive}
