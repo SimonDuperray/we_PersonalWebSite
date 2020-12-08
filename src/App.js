@@ -23,6 +23,9 @@ import Services__card from "./components/Services__card";
 import Teams__card from "./components/Teams__card";
 import Portfolio__card from "./components/Portfolio__card";
 
+// IMPORT SCRAPED DATA
+import Data from "./database/database.json";
+
 const FILTER_MAP = {
   All: () => true,
   AI: task => task.ai,
@@ -44,11 +47,12 @@ class App extends Component{
         },
         1000: {
           items: 3,
-        },
-      }
+        }
+      },
     }
   }
   componentDidMount(){
+    // jquery
     $(document).ready(function(){
       $(window).scroll(function(){
         if(this.scrollY>20){
@@ -69,17 +73,6 @@ class App extends Component{
     const filterList = FILTER_NAMES.map(name => (
       <li key={name} className="filter">{name}</li>
     ));
-    // const taskList = tasks
-    //   .filter(FILTER_MAP[filter])
-    //   .map(task => (
-    //     <Portfolio__card
-    //       name="Angexplorer"
-    //       description="Entrep's project"
-    //       ai={true}
-    //       web={false}
-    //       elec={false}
-    //     />
-    //   ));
     return (
       <div className="App">
         {/* SCROLL BTN START */}
@@ -332,90 +325,23 @@ class App extends Component{
               {filterList}
             </ul>
             <div className="portfolio-content">
-              <div class="card">
+              {/* <div class="card">
                 <div class="box">
                   <i class="fas fa-code"></i>
                   <div class="text">Angexplorer</div>
                   <p>Full Stack Websites | Mobile applications</p>
                 </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-microchip"></i>
-                    <div class="text">Arduino IA</div>
-                    <p>Microcontroller | PIC | STM32F013 | Arduino</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-code"></i>
-                    <div class="text">WILTY</div>
-                    <p>Full Stack Websites | Mobile applications</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-microchip"></i>
-                    <div class="text">Station météo</div>
-                    <p>Microcontroller | PIC | STM32F013 | Arduino</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-code"></i>
-                    <div class="text">Distributeur boisson</div>
-                    <p>Full Stack Websites | Mobile applications</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-microchip"></i>
-                    <div class="text">Neuralink</div>
-                    <p>Microcontroller | PIC | STM32F013 | Arduino</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-code"></i>
-                    <div class="text">ADR-Java</div>
-                    <p>Full Stack Websites | Mobile applications</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-microchip"></i>
-                    <div class="text">Sudoku solver</div>
-                    <p>Microcontroller | PIC | STM32F013 | Arduino</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-code"></i>
-                    <div class="text">Personal website</div>
-                    <p>Full Stack Websites | Mobile applications</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-microchip"></i>
-                    <div class="text">Project Manager</div>
-                    <p>Microcontroller | PIC | STM32F013 | Arduino</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-code"></i>
-                    <div class="text">Chrono_BG</div>
-                    <p>Full Stack Websites | Mobile applications</p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="box">
-                    <i class="fas fa-microchip"></i>
-                    <div class="text">PIC18FK20</div>
-                    <p>Microcontroller | PIC | STM32F013 | Arduino</p>
-                </div>
-              </div>
+              </div> */}
+              { Data.map(post => {
+                return (
+                  <Portfolio__card
+                    name={post.name}
+                    description={post.description}
+                    date={post.created_at}
+                    language={post.language}
+                  />
+                )
+              }) }
               {/* {taskList} */}
             </div>
           </div>

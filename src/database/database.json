@@ -1,8 +1,8 @@
 [
     {
-        "name": "CoursDeveloppementWeb",
+        "name": "CoursWeb",
         "category": "fo",
-        "html_url": "https://github.com/SimonDuperray/fo_CoursDeveloppementWeb",
+        "html_url": "https://github.com/SimonDuperray/fo_CoursWeb",
         "description": "Initiation au développement web - Entrep' - Interne ESEO",
         "created_at": "2020-11-07",
         "language": "HTML"
@@ -14,6 +14,14 @@
         "description": "Il n'y a pas encore de description.",
         "created_at": "2020-07-02",
         "language": "Jupyter Notebook"
+    },
+    {
+        "name": "caMarcheSuper",
+        "category": "ot",
+        "html_url": "https://github.com/SimonDuperray/ot_caMarcheSuper",
+        "description": "ça marche encore",
+        "created_at": "2020-12-08",
+        "language": "Langage principal non disponible"
     },
     {
         "name": "chrono-background",
@@ -38,6 +46,14 @@
         "description": "Il n'y a pas encore de description.",
         "created_at": "2020-11-04",
         "language": "Langage principal non disponible"
+    },
+    {
+        "name": "personalWebSite",
+        "category": "we",
+        "html_url": "https://github.com/SimonDuperray/we_personalWebSite",
+        "description": "My personal website.",
+        "created_at": "2020-12-07",
+        "language": "JavaScript"
     },
     {
         "name": "WILTY2K20",

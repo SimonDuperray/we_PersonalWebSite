@@ -1,0 +1,57 @@
+.portfolio .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    margin: 15px 15px;
+    transition: all 0.3s ease;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio .card:hover{
+    background: #9B786F;
+}
+.portfolio .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    
+    text-overflow: ellipsis;
+}
+.portfolio .card:hover .box{
+    transform: scale(1.05);
+}
+.portfolio .card .name{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 0 0;
+    /* letter-spacing: 2px; */
+}
+.portfolio .card .date{
+    color: #9B786F;
+}
+.portfolio .card:hover .date{
+    color: #fff;
+}
+.portfolio .card .description{
+    color: #fff;
+}
+.portfolio .card .language{
+    color: #fff;
+    font-size: 13px;
+}
+.portfolio .card i{
+    font-size: 50px;
+    color: #9B786F;
+    transition: color 0.3s ease;
+}
+.portfolio .card:hover i{
+    color: #fff;
+}

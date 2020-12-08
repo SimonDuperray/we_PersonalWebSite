@@ -479,7 +479,7 @@ section .title::after{
     overflow: hidden;
     transition: all 0.3s ease;
 } */
-.portfolio .card{
+/* .portfolio .card{
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
@@ -534,7 +534,7 @@ section .title::after{
 }
 .portfolio .card:hover i{
     color: #fff;
-}
+} */
 /* PORTFOLIO END */
 
 /* 11. TEAM */

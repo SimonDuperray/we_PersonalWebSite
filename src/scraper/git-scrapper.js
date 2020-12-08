@@ -34,15 +34,14 @@ let request = https.request(options, (response) => {
     response.on('end', (out) => {
         var json = JSON.parse(body);
         // ===== ALGORITHME =====
-        // 1. get currentProject (for loop)
-        // 2.  analyze + treatment
-        // 4. stringify/parse it into ..//database/scraped-data.json
-        // 5. increment index value (json index)
+        // 1. get currentProject (for loop) OK
+        // 2.  analyze + treatment OK
+        // 4. stringify/parse json OK
 
         // prepare Array to stock Project Objects
         var result = [];
 
-        for(let i=0; i<Object.keys(json).length; i++)
+        for(let i=0; i<Object.keys(json).length; i++){
             // 1. get currentProject
             const currentProject = json[i];
             
@@ -64,12 +63,11 @@ let request = https.request(options, (response) => {
 
             var finalProject = new Project(currentName, currentCategory, currentHTMLUrl, currentDescription, currentCreatedAt, currentLanguage);
 
-            // console.log("=============================================================================");
-            // console.log(finalProject);
-            // console.log("=============================================================================");
+            console.log("=============================================================================");
+            console.log(json);
+            console.log("=============================================================================");
 
             result.push(finalProject);
-            console.log(i+": "+result.length);
         };
 
         fs.writeFileSync('../database/database.json', JSON.stringify(result, null, 4), (err) => {
