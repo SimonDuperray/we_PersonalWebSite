@@ -6,6 +6,9 @@
     Author: Simon Duperray
 */
 
+// TODO:
+// - team card -> redirect sur Linkedin click sur la carte et pas seulement sur le nom de la personne
+
 import React, { Component } from 'react';
 import './App.css';
 

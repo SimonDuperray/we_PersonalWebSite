@@ -1,11 +1,8 @@
 /*
     TODO LIST
-    - scrap languages and pourcentages instead of just one language
     - traitement des accents et des caratères spéciaux dans les noms des repos
     - scraper image github instead of stock it locally
 */
-
-// export function testLaunchScraper() {
 
 const https = require("https");
 const fs = require("fs");
@@ -22,7 +19,7 @@ let CHROME_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 let FIREFOX_USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:77.0) Gecko/20190101 Firefox/77.0";
 let IE_USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko";
 
-let options = {
+let optionsGithub = {
     host: 'api.github.com',
     path: '/users/' + username + '/repos',
     method: 'GET',
@@ -44,7 +41,7 @@ const renderPourcentage = (crit) => {
     return (crit*100/totalRepos);
 }
 
-let request = https.request(options, (response) => {
+let request = https.request(optionsGithub, (response) => {
     let body = '';
     response.on('data', (out) => {
         body += out;
@@ -107,5 +104,3 @@ request.on('error', (e) => {
 });
 
 request.end();
-
-// };

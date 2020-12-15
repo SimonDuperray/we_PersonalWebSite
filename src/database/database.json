@@ -40,6 +40,14 @@
         "language": "Java"
     },
     {
+        "name": "OwnApi",
+        "category": "we",
+        "html_url": "https://github.com/SimonDuperray/we_OwnApi",
+        "description": "My own API",
+        "created_at": "2020-12-13",
+        "language": "JavaScript"
+    },
+    {
         "name": "PersonalWebSite",
         "category": "we",
         "html_url": "https://github.com/SimonDuperray/we_PersonalWebSite",
