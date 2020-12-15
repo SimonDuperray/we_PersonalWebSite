@@ -1,13 +1,15 @@
 /*
-  ================================
-  == PERSONAL WEBSITE PORTFOLIO ==
-  ================================
+  ======================================
+  ===== PERSONAL WEBSITE PORTFOLIO =====
+  ======================================
     Creation: 2/12/2020
     Author: Simon Duperray
 */
 
 import React, { Component } from 'react';
 import './App.css';
+
+// import { testLaunchScraper } from "./scraper/git-scrapper.js";
 
 import banner from "../src/images/banner.jpg";
 
@@ -17,7 +19,7 @@ import $ from "jquery";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import * as emailjs from 'emailjs-com';
+// import * as emailjs from 'emailjs-com';
 
 // IMPORT COMPONENTS
 import Services__card from "./components/Services__card";
@@ -50,6 +52,11 @@ class App extends Component{
     }
   }
   componentDidMount(){
+    // if(window.performance){
+    //   if(performance.navigation.type==1){
+    //     testLaunchScraper();
+    //   }
+    // }
     // jquery
     $(document).ready(function(){
       $(window).scroll(function(){

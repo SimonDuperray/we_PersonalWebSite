@@ -47,6 +47,7 @@ class App extends Component{
           items: 2,
         },
         1000: {
+		B
           items: 3,
         }
       },
@@ -57,6 +58,7 @@ class App extends Component{
     // jquery
     $(document).ready(function(){
       $(window).scroll(function(){
+	      B
         if(this.scrollY>20){
           $('.navbar').addClass("sticky");
         } else {

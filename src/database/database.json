@@ -8,16 +8,9 @@
         "language": "HTML"
     },
     {
-        "category": "main-api",
-        "html_url": "https://github.com/SimonDuperray/main-api",
-        "description": "My own API",
-        "created_at": "2020-12-13",
-        "language": "JavaScript"
-    },
-    {
-        "name": "chrono-background",
+        "name": "Chrono-background",
         "category": "ot",
-        "html_url": "https://github.com/SimonDuperray/ot_chrono-background",
+        "html_url": "https://github.com/SimonDuperray/ot_Chrono-background",
         "description": "Il n'y a pas encore de description.",
         "created_at": "2020-12-01",
         "language": "HTML"
@@ -39,17 +32,17 @@
         "language": "Langage principal non disponible"
     },
     {
-        "name": "emopo",
+        "name": "Emopo",
         "category": "we",
-        "html_url": "https://github.com/SimonDuperray/we_emopo",
+        "html_url": "https://github.com/SimonDuperray/we_Emopo",
         "description": "Application de suivi des émotions positives.",
         "created_at": "2020-12-13",
         "language": "Java"
     },
     {
-        "name": "personalWebSite",
+        "name": "PersonalWebSite",
         "category": "we",
-        "html_url": "https://github.com/SimonDuperray/we_personalWebSite",
+        "html_url": "https://github.com/SimonDuperray/we_PersonalWebSite",
         "description": "My personal website.",
         "created_at": "2020-12-07",
         "language": "JavaScript"
