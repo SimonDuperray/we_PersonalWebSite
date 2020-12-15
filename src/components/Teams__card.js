@@ -11,50 +11,6 @@ import zara from "../images/zara.jpg";
 
 class Teams__card extends Component{
     render(){
-        // const renderEngineer = () => {
-        //     var _image="";
-        //     var _link="";
-        //     var _name="";
-        //     var _description="";
-        //     switch(this.props.engineer){
-        //         case "1":
-        //             _image=franck;
-        //             _link="https://www.linkedin.com/in/gomezfranck/";
-        //             _name="Franck Gomez";
-        //             _description="AI | Web Development | Entrepreneurship";
-        //             return <div className="teams-card-wrapper"><img src={_image} alt="" /><a href={_link} target="_blank" class="text name-teams">{_name}</a><p className="desc-teams">{_description}</p></div>
-        //         case "2":
-        //             _image=amelie;
-        //             _link="https://www.linkedin.com/in/am%C3%A9liedousteyssier/";
-        //             _name="Amélie Dousteyssier";
-        //             _description="Sciences | Managment | Technology";
-        //             return <div className="teams-card-wrapper"><img src={_image} alt="" /><a href={_link} target="_blank" class="text name-teams">{_name}</a><p className="desc-teams">{_description}</p></div>
-        //         case "3":
-        //             _image=jules;
-        //             _link="https://www.linkedin.com/in/jules-del%C3%A9tang-4607431a9/";
-        //             _name="Jules Delétang";
-        //             _description="Electronics | Engineering | Handiwork";
-        //             return <div className="teams-card-wrapper"><img src={_image} alt="" /><a href={_link} target="_blank" class="text name-teams">{_name}</a><p className="desc-teams">{_description}</p></div>
-        //         case "4":
-        //             _image=titouan;
-        //             _link="https://www.linkedin.com/in/titouan-machet/";
-        //             _name="Titouan Machet";
-        //             _description="Programming | Engineering | Electronics";
-        //             return <div className="teams-card-wrapper"><img src={_image} alt="" /><a href={_link} target="_blank" class="text name-teams">{_name}</a><p className="desc-teams">{_description}</p></div>
-        //         case "5":
-        //             _image=zara;
-        //             _link="https://www.linkedin.com/in/zara-marks-9411451a1/";
-        //             _name="Zara Marks";
-        //             _description="Electronics | Teaching | Programming";
-        //             return <div className="teams-card-wrapper"><img src={_image} alt="" /><a href={_link} target="_blank" class="text name-teams">{_name}</a><p className="desc-teams">{_description}</p></div>
-        //         case "6":
-        //             _image=leopold;
-        //             _link="https://www.linkedin.com/in/l%C3%A9opold-denis-b960011b1/";
-        //             _name="Léopold Denis"; 
-        //             _description="Electronics | Music | Programming";
-        //             return <div className="teams-card-wrapper"><img src={_image} alt="" /><a href={_link} target="_blank" class="text name-teams">{_name}</a><p className="desc-teams">{_description}</p></div>
-        //     }
-        // }
         const renderImg = () => {
             var _image="";
             switch(this.props.engineer){

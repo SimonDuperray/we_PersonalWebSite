@@ -188,6 +188,9 @@ section .title::after{
     pointer-events: none;
     transition: all 0.3s ease;
 }
+.scroll-up-btn a{
+    color: #fff;
+}
 .scroll-up-btn.show{
     bottom: 30px;
     opacity: 1;
@@ -462,8 +465,12 @@ section .title::after{
     text-align: center;
     margin-bottom: 20px;
 }
+.portfolio h3{
+    color: #9B786F;
+    text-align: center;
+}
 .portfolio .filters-wrapper li.filter{
-    display: inline;
+    display: inline-block;
     color: #9B786F;
     margin: 0 10px;
 }
@@ -471,70 +478,9 @@ section .title::after{
     cursor: pointer;  
     text-decoration: underline;  
 }
-/* .portfolio .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-} */
-/* .portfolio .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    margin: 15px 15px;
-    transition: all 0.3s ease;
+.portfolio .title::before{
+    background: #fff;
 }
-.portfolio .card:hover{
-    background: #9B786F;
-}
-.portfolio .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.portfolio .card:hover .box{
-    transform: scale(1.05);
-}
-.portfolio .card .text{
-    color: #fff;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.portfolio .card p{
-    color: #fff;
-}
-.portfolio .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #9B786F;
-    transition: all 0.3s ease;
-}
-.portfolio .card:hover img{
-    border-color: #fff;
-}
-.portfolio .card .name-teams{
-    letter-spacing: 1px;
-}
-.portfolio .card .desc-teams{
-    letter-spacing: 2px;
-}
-.portfolio .card i{
-    font-size: 50px;
-    color: #9B786F;
-    transition: color 0.3s ease;
-}
-.portfolio .card:hover i{
-    color: #fff;
-} */
 /* PORTFOLIO END */
 
 /* 11. TEAM */
@@ -546,8 +492,8 @@ section .title::after{
 .teams .title{
     color: #111;
 }
-.portfolio .title::before{
-    background: #fff;
+.teams .title::before{
+    background: #000;
 }
 .teams .title::after{
     content: "who with me";
@@ -842,6 +788,9 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+    .scroll-up-btn a{
+        color: #fff;
     }
 }
 /* RESPONSIVE MEDIA QUERY END */

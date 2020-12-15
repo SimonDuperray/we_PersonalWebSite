@@ -1,3 +1,13 @@
+/*
+    AMELIORATIONS
+    - détecter la première lettre du (ou des mots si esp) et -> capitallETTER
+    - détecter si !convention et si private alors ne pas prendre en compte
+    - scrap languages and pourcentages instead of just one language
+    - traitement des accents et des caratères spéciaux dans les noms des repos
+    - scraper image github instead of stock it locally
+    - ne pas prendre en compte les noms de repos dans convention de nommage ni les repos privés
+*/
+
 const https = require("https");
 const fs = require("fs");
 
@@ -33,11 +43,6 @@ let request = https.request(options, (response) => {
 
     response.on('end', (out) => {
         var json = JSON.parse(body);
-        // ===== ALGORITHME =====
-        // 1. get currentProject (for loop) OK
-        // 2.  analyze + treatment OK
-        // 4. stringify/parse json OK
-
         // prepare Array to stock Project Objects
         var result = [];
 
@@ -64,7 +69,7 @@ let request = https.request(options, (response) => {
             var finalProject = new Project(currentName, currentCategory, currentHTMLUrl, currentDescription, currentCreatedAt, currentLanguage);
 
             console.log("=============================================================================");
-            console.log(json);
+            console.log(finalProject);
             console.log("=============================================================================");
 
             result.push(finalProject);

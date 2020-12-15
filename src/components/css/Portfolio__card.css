@@ -21,7 +21,6 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    
     text-overflow: ellipsis;
 }
 .portfolio .card:hover .box{
@@ -32,7 +31,11 @@
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 0 0;
-    /* letter-spacing: 2px; */
+    text-decoration: underline;
+    letter-spacing: 1px;
+}
+.portfolio .card:hover .name{
+    color: #111;
 }
 .portfolio .card .date{
     color: #9B786F;
@@ -43,9 +46,15 @@
 .portfolio .card .description{
     color: #fff;
 }
+.portfolio .card:hover .description{
+    color: #111;
+}
 .portfolio .card .language{
-    color: #fff;
+    color: #9B786F;
     font-size: 13px;
+}
+.portfolio .card:hover .language{
+    color: #fff;
 }
 .portfolio .card i{
     font-size: 50px;

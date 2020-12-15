@@ -17,7 +17,6 @@ import $ from "jquery";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import * as emailjs from 'emailjs-com';
 
 // IMPORT COMPONENTS
 import Services__card from "./components/Services__card";
@@ -26,6 +25,15 @@ import Portfolio__card from "./components/Portfolio__card";
 
 // IMPORT SCRAPED DATA
 import Data from "./database/database.json";
+
+const FILTER_MAP = {
+  All: () => true,
+  AI: task => task.ai,
+  Web: task => task.web,
+  Electronics: task => task.elec,
+  Course: task => task.course,
+  Other: task => task.other
+};
 
 class App extends Component{
   constructor(props){
@@ -42,11 +50,7 @@ class App extends Component{
           items: 3,
         }
       },
-      cFilter: "al",
-      // name: '',
-      // email: '',
-      // subject: '',
-      // message: ''
+      cFilter: "all"
     }
   }
   componentDidMount(){
@@ -66,46 +70,16 @@ class App extends Component{
       });
     });
   }
-  // handleSubmit(e){
-  //   e.preventDefault();
-  //   const { name, email, subject, message } = this.state;
-  //   let templateParams = {
-  //     from_name: email,
-  //     to_name: 'simon.duperray@reseau.eseo.fr',
-  //     subject: subject,
-  //     message_html: message,
-  //   }
-  //   emailjs.send(
-  //     'gmail',
-  //     'template'
-  //   )
-  // }
   render(){
-    const dpcrfl = () => {
-      switch(this.state.cFilter){
-        case "al":
-          return("All");
-        case "ai":
-          return("AI");
-        case "we":
-          return("Web");
-        case "el":
-          return("Electronics");
-        case "fo":
-          return("Formation");
-        case "ot":
-          return("Other");
-        default:
-          return("Problem");
-      }
-    }
+    const FILTER_NAMES = Object.keys(FILTER_MAP);
+    const filterList = FILTER_NAMES.map(name => (
+      <li key={name} className="filter">{name}</li>
+    ));
     return (
       <div className="App">
         {/* SCROLL BTN START */}
         <div className="scroll-up-btn">
-          <a href="#home">
-            <i className="fas fa-angle-up"></i>
-          </a>
+          <i className="fas fa-angle-up"></i>
         </div>
         {/* SCROLL BTN END */}
 
@@ -222,7 +196,7 @@ class App extends Component{
         <section className="skills" id="skills">
           <div className="max-width">
             <h2 className="title">My skills</h2>
-            <div className="skills-content content-border">
+            <div className="skills-content">
               {/* WEB & MOBILE DEV SKILLS */}
               <div className="column right">
                 <h2 className="skills-part">Web Development Skills</h2>
@@ -349,49 +323,30 @@ class App extends Component{
         <section className="portfolio" id="portfolio">
           <div className="max-width">
             <h2 className="title">My portfolio</h2>
-            {/* { setActiveClass() } */}
             <ul className="filters-wrapper">
-              <li id="al 1" className="filter" onClick={ () => { this.setState({ cFilter: "al" }) } }>All</li> 
-              <li id="ai 2" className="filter" onClick={ () => { this.setState({ cFilter: "ai" }) } }>AI</li>
-              <li id="we 3" className="filter" onClick={ () => { this.setState({ cFilter: "we" }) } }>Web</li>
-              <li id="el 4" className="filter" onClick={ () => { this.setState({ cFilter: "el" }) } }>Electronics</li>
-              <li id="fo 5" className="filter" onClick={ () => { this.setState({ cFilter: "fo" }) } }>Course</li>
-              <li id="ot 6" className="filter" onClick={ () => { this.setState({ cFilter: "ot" }) } }>Others</li>
+              {filterList}
             </ul>
-            <h3>
-              {dpcrfl()}
-              &nbsp;
-              Projects:
-            </h3>
             <div className="portfolio-content">
-              {
-                Data.map(post => {
-                  if(this.state.cFilter==="al"){
-                    return (
-                      <Portfolio__card 
-                        name={post.name}
-                        category={post.category}
-                        description={post.description}
-                        date={post.created_at}
-                        language={post.language}
-                        link={post.html_url}
-                      />
-                    ) 
-                  } else if(this.state.cFilter===post.category){
-                      return (
-                        <Portfolio__card
-                          name={post.name}
-                          category={post.category}
-                          description={post.description}
-                          date={post.created_at}
-                          language={post.language}
-                          link={post.html_url}
-                        />
-                      )
-                    } 
-                  }
+              {/* <div class="card">
+                <div class="box">
+                  <i class="fas fa-code"></i>
+                  <div class="text">Angexplorer</div>
+                  <p>Full Stack Websites | Mobile applications</p>
+                </div>
+              </div> */}
+              { Data.map(post => {
+                return (
+                  <Portfolio__card
+                    name={post.name}
+                    category={post.category}
+                    description={post.description}
+                    date={post.created_at}
+                    language={post.language}
+                    link={post.html_url}
+                  />
                 )
-              }
+              }) }
+              {/* {taskList} */}
             </div>
           </div>
         </section>

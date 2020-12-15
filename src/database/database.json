@@ -8,20 +8,11 @@
         "language": "HTML"
     },
     {
-        "name": "WEBSCRAPINGPY",
-        "category": "fo",
-        "html_url": "https://github.com/SimonDuperray/fo_WEBSCRAPINGPY",
-        "description": "Il n'y a pas encore de description.",
-        "created_at": "2020-07-02",
-        "language": "Jupyter Notebook"
-    },
-    {
-        "name": "caMarcheSuper",
-        "category": "ot",
-        "html_url": "https://github.com/SimonDuperray/ot_caMarcheSuper",
-        "description": "ça marche encore",
-        "created_at": "2020-12-08",
-        "language": "Langage principal non disponible"
+        "category": "main-api",
+        "html_url": "https://github.com/SimonDuperray/main-api",
+        "description": "My own API",
+        "created_at": "2020-12-13",
+        "language": "JavaScript"
     },
     {
         "name": "chrono-background",
@@ -46,6 +37,14 @@
         "description": "Il n'y a pas encore de description.",
         "created_at": "2020-11-04",
         "language": "Langage principal non disponible"
+    },
+    {
+        "name": "emopo",
+        "category": "we",
+        "html_url": "https://github.com/SimonDuperray/we_emopo",
+        "description": "Application de suivi des émotions positives.",
+        "created_at": "2020-12-13",
+        "language": "Java"
     },
     {
         "name": "personalWebSite",
