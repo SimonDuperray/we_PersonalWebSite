@@ -10,6 +10,7 @@
 ## :page_facing_up: General info
 On this website you can find all relevent informations about me and my educational background. There is a portfolio showing my projects, it is linked to my GitHub to always display my last projects automatically, the scraper algorithm does the work for me.<br><br>
 [![website1.png](https://i.postimg.cc/fyg5GZKL/website1.png)](https://postimg.cc/y3cFRM24)<br><br>
+[![website2.png](https://i.postimg.cc/PrgQYSVB/website2.png)](https://postimg.cc/tYz6HNj5)
 
 	
 ## :computer: Technologies
