@@ -18,4 +18,7 @@ My personal website is created with:
 * JSON
 
 ## :cd: Setup
-You can visit it at www.simonduperray.fr. (the website is still not online)
+You can visit it at www.simonduperray.fr. (the website is still not online), or clone it:
+```bat
+$ git clone https://github.com/SimonDuperray/we_PersonalWebSite.git
+```
