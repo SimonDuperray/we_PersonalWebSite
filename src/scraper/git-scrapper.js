@@ -2,6 +2,7 @@
     TODO LIST
     - traitement des accents et des caratères spéciaux dans les noms des repos
     - scraper image github instead of stock it locally
+    - upload projects on GitHub
 */
 
 const https = require("https");
@@ -65,13 +66,13 @@ let request = https.request(optionsGithub, (response) => {
                 var currentCategory=currentProject['name'].split("_")[0];
                 var currentHTMLUrl=currentProject['html_url'];
                 if(currentProject["description"]===null){
-                    var currentDescription="Il n'y a pas encore de description.";
+                    var currentDescription="No available description.";
                 } else {
                     var currentDescription=currentProject['description'];
                 }
                 var currentCreatedAt=currentProject['created_at'].split("T")[0];
                 if(currentProject['language']===null){
-                    var currentLanguage="Langage principal non disponible";
+                    var currentLanguage="No available language.";
                 } else {
                     var currentLanguage=currentProject['language'];
                 }

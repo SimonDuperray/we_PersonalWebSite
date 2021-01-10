@@ -10,7 +10,7 @@ class Portfolio__card extends Component{
                 case "ai":
                     return <i className="fas fa-brain"></i>;
                 case "el":
-                    return <i className="fas fa-microship"></i>;
+                    return <i className="fas fa-microchip"></i>;
                 case "fo":
                     return <i class="fas fa-chalkboard-teacher"></i>;
                 case "ot":
