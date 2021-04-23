@@ -20,7 +20,7 @@ let CHROME_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 let FIREFOX_USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:77.0) Gecko/20190101 Firefox/77.0";
 let IE_USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko";
 
-let optionsGithub = {
+let getRequestGithub = {
     host: 'api.github.com',
     path: '/users/' + username + '/repos',
     method: 'GET',
@@ -42,7 +42,7 @@ const renderPourcentage = (crit) => {
     return (crit*100/totalRepos);
 }
 
-let request = https.request(optionsGithub, (response) => {
+let request = https.request(getRequestGithub, (response) => {
     let body = '';
     response.on('data', (out) => {
         body += out;
@@ -66,7 +66,7 @@ let request = https.request(optionsGithub, (response) => {
                 var currentCategory=currentProject['name'].split("_")[0];
                 var currentHTMLUrl=currentProject['html_url'];
                 if(currentProject["description"]===null){
-                    var currentDescription="No available description.";
+                    var currentDescription = "No description available.";
                 } else {
                     var currentDescription=currentProject['description'];
                 }

@@ -112,6 +112,14 @@
         "language": "HTML"
     },
     {
+        "name": "ColorDetector",
+        "category": "ot",
+        "html_url": "https://github.com/SimonDuperray/ot_ColorDetector",
+        "description": "Simple Color Detector using Python and Opencv",
+        "created_at": "2021-01-10",
+        "language": "Python"
+    },
+    {
         "name": "DDB",
         "category": "ot",
         "html_url": "https://github.com/SimonDuperray/ot_DDB",
@@ -126,6 +134,14 @@
         "description": "No available description.",
         "created_at": "2020-06-26",
         "language": "Java"
+    },
+    {
+        "name": "GitExtension",
+        "category": "ot",
+        "html_url": "https://github.com/SimonDuperray/ot_GitExtension",
+        "description": "Visual Studio Code Extension - Push and Commit Shortcuts",
+        "created_at": "2021-01-13",
+        "language": "TypeScript"
     },
     {
         "name": "Invisibility",
@@ -144,12 +160,36 @@
         "language": "Python"
     },
     {
-        "name": "Angexplorer",
+        "name": "MondialRelayScraper",
+        "category": "ot",
+        "html_url": "https://github.com/SimonDuperray/ot_MondialRelayScraper",
+        "description": "Python script who alerts you when your package is arrived.",
+        "created_at": "2021-01-15",
+        "language": "Python"
+    },
+    {
+        "name": "RepoTracker",
+        "category": "ot",
+        "html_url": "https://github.com/SimonDuperray/ot_RepoTracker",
+        "description": "Github Repository Tracker using Python",
+        "created_at": "2021-01-03",
+        "language": "Python"
+    },
+    {
+        "name": "SpotifyPlayer",
+        "category": "ot",
+        "html_url": "https://github.com/SimonDuperray/ot_SpotifyPlayer",
+        "description": "Spotify Player with Python using Spotify API",
+        "created_at": "2021-01-02",
+        "language": "Python"
+    },
+    {
+        "name": "AngeXplorer",
         "category": "we",
-        "html_url": "https://github.com/SimonDuperray/we_Angexplorer",
+        "html_url": "https://github.com/SimonDuperray/we_AngeXplorer",
         "description": "No available description.",
         "created_at": "2020-11-04",
-        "language": "No available language."
+        "language": "JavaScript"
     },
     {
         "name": "Emopo",

@@ -98,11 +98,7 @@ class Teams__card extends Component{
                 <div class="box">
                     {renderImg()}
                     {renderATag()}
-                    {renderDescription()}
-                    {}
-                    {/* <img src={leopold} alt=""/>
-                    <a href="https://www.linkedin.com/in/l%C3%A9opold-denis-b960011b1/" target="_blank" class="text name-teams">Léopold Denis</a>
-                    <p className="desc-teams">{this.props.description}</p> */}
+                    {renderDescription()}   
                 </div>
             </div>
         )
